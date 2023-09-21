@@ -9,8 +9,11 @@ trigger:
 pool:
   name: 'LocalAgentPrisco'
 
-steps:
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+stages:
+- stage: Greeting
+  jobs: 
+  - job: greetingjob
+    steps:
+    - task: job@1
+      inputs:
+        command: 'echo ciaooo'
