@@ -9,11 +9,8 @@ trigger:
 pool:
   name: 'LocalAgentPrisco'
 
-stages:
-- stage: Greeting
-  jobs: 
-  - job: greetingjob
-    steps:
-    - task: job@1
-      inputs:
-        command: 'echo ciaooo'
+steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: echo 'prisco'
